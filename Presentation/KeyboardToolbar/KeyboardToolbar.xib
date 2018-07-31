@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardToolbar" customModule="Chewy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-GE-jPJ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" id="utf-Wz-ftP">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bar" momentary="YES" id="eaH-VK-gCe">
+                                <rect key="frame" x="20" y="7" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Previous" width="80"/>
+                                    <segment title="Next" width="60"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="fy3-rf-eId"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ezu-XZ-at5"/>
+                        <barButtonItem title="Done" id="yW9-Da-UpA">
+                            <connections>
+                                <action selector="doneTapped:" destination="iN0-l3-epB" id="33G-fo-yjv"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qZd-GE-jPJ" secondAttribute="bottom" id="2xQ-o3-j6x"/>
+                <constraint firstAttribute="trailing" secondItem="qZd-GE-jPJ" secondAttribute="trailing" id="4e9-qi-ua7"/>
+                <constraint firstItem="qZd-GE-jPJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VK1-ou-28Q"/>
+                <constraint firstItem="qZd-GE-jPJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jYn-il-Owx"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="doneButton" destination="yW9-Da-UpA" id="kYH-Um-qN8"/>
+                <outlet property="segmentedControl" destination="eaH-VK-gCe" id="19f-er-KMc"/>
+            </connections>
+            <point key="canvasLocation" x="611" y="623"/>
+        </view>
+    </objects>
+</document>
